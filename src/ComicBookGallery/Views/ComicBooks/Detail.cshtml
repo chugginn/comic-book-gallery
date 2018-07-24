@@ -1,9 +1,10 @@
-﻿@{
+﻿@model ComicBookGallery.Models.
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Comic Book Detail";
 }
 
-<h1>@ViewBag.SeriesTitle</h1>
+<h1>@Model.SeriesTitle</h1>
 <h2>Issue #@ViewBag.IssueNumber</h2>
         
 <h5>Description: </h5>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using ComicBookGallery.Models;
 
-namespace ComicBookGallery
+namespace ComicBookGallery.Models
 {
     public class ComicBook
     {

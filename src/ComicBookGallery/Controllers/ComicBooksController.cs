@@ -6,11 +6,25 @@ using System.Web.Mvc;
 
 namespace ComicBookGallery.Controllers
 {
+    // all controller classes must inherit MVC Controller base class and must be public
     public class ComicBooksController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from the comic books controller.";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                return Redirect("/");
+            }
+
+            return Content("Hello comic books detail page.");
+        }
+    }
+
+    public class HomeController : Controller
+    {
+        public string Index()
+        {
+            return "Hello world.";
         }
     }
 }

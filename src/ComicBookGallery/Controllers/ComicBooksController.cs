@@ -9,14 +9,10 @@ namespace ComicBookGallery.Controllers
     // all controller classes must inherit MVC Controller base class and must be public
     public class ComicBooksController : Controller
     {
+        // ActionResult type is parent to Redirect and Content types
         public ActionResult Detail()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
-            {
-                return Redirect("/");
-            }
-
-            return Content("Hello comic books detail page.");
+            return View();
         }
     }
 

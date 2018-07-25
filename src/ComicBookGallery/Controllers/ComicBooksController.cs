@@ -18,6 +18,12 @@ namespace ComicBookGallery.Controllers
             _comicBookRepository = new ComicBookRepository();
         }
 
+        public ActionResult Index()
+        {
+            var comicBooks = _comicBookRepository.GetComicBooks();
+            return View(comicBooks);
+        }
+
         // ActionResult type is parent to Redirect and Content types
         public ActionResult Detail(int? id)
         {
@@ -29,14 +35,6 @@ namespace ComicBookGallery.Controllers
             var comicBook = _comicBookRepository.GetComicBook(id.Value);
 
             return View(comicBook);
-        }
-    }
-
-    public class HomeController : Controller
-    {
-        public string Index()
-        {
-            return "Hello world.";
         }
     }
 }
